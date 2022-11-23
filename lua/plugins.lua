@@ -162,23 +162,23 @@ packer.startup({
       -- default_url_format = "https://gitcode.net/mirrors/%s",
       -- default_url_format = "https://gitclone.com/github.com/%s",
     },
-    display = {
+    -- display = {
     -- 使用浮动窗口显示
-      open_fn = function()
-      return require("packer.util").float({ border = "single" })
-      end,
-     },
+    --   open_fn = function()
+    --     return require("packer.util").float({ border = "single" })
+    --   end,
+    -- },
   },
 })
 
 -- 每次保存 plugins.lua 自动安装插件
- -- move to autocmds.lua
- pcall(
-   vim.cmd,
-   [[
-     augroup packer_user_config
-     autocmd!
-     autocmd BufWritePost plugins.lua source <afile> | PackerSync
-     augroup end
- ]]
- )
+-- move to autocmds.lua
+-- pcall(
+--   vim.cmd,
+--   [[
+-- augroup packer_user_config
+-- autocmd!
+-- autocmd BufWritePost plugins.lua source <afile> | PackerSync
+-- augroup end
+-- ]]
+-- )
